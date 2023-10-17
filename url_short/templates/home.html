@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1> Url Shortener </h1>
+<form action="result" method="post">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="basic-url" class="form-label">Your URL</label>
+        <div class="input-group">
+            <span class="input-group-text" id="basic-addon3">https://</span>
+            <input type="text" name="url" class="form-control" id="basic-url"
+                aria-describedby="basic-addon3 basic-addon4">
+        </div>
+        <hr>
+    </div>
+    <input type="submit" class="btn btn-dark" Submit>
+</form>
+
+{% endblock %}
