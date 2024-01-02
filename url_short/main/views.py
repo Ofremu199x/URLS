@@ -20,7 +20,7 @@ def result(request):
     url_shortener = pyshorteners.Shortener()
     short_url = url_shortener.tinyurl.short(url)
     st = str(short_url)
-    cp = pyperclip.copy(st)
-    messages.success(request,'The url has been copied to the clipboard') 
+    #cp = pyperclip.copy(st)
+    #messages.success(request,'The url has been copied to the clipboard') 
     
     return render (request, 'result.html',{'st':st })
