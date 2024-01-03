@@ -11,11 +11,28 @@
 <br>
 <div class="card">
     <div class="card-header">
-        Url
+        Url Shortener Using Tinyurl
     </div>
     <div class="card-body">
-        <h5 class="card-title" id="myText">{{st}}</h5>
-        <button onclick="myFunction()" type="button" class="btn btn-outline-secondary"> Copy </button>
+
+        <div class="row">
+            <div class="mb-3">
+                <div class="input-group">
+                    <span class="input-group-text" id="basic-addon3">Url</span>
+                    <input type="text" class="form-control" id="myText" value="{{st}}" readonly>
+                </div>
+            </div>
+            <button onclick="myFunction()" type="button" class="btn btn-dark text-center col"> Copy </button>
+            
+            <br>
+            <hr>
+
+            <a href="{{st}}"
+                class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover text-center "
+                id="myText3" target="_blank"> {{st}} </a>
+                <br>
+            <h5 class="text-center"> Click on link to open it on a new tab</h5>
+        </div>
 
         <br>
         <a href="{% url 'home' %}" class="btn btn-dark">Go Back</a>
